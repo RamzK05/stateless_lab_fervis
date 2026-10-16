@@ -2,13 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-// Main colors for the campus directory design.
-const Color teal = Color(0xFF117F87);
-const Color darkTeal = Color(0xFF095B63);
-const Color backgroundColor = Color(0xFFF3F6F8);
-const Color headingColor = Color(0xFF20343B);
-const Color secondaryText = Color(0xFF687981);
-const Color borderColor = Color(0xFFE4EAED);
+// Ocean blue and navy colors for the campus directory design.
+const Color teal = Color(0xFF167DAD);
+const Color darkTeal = Color(0xFF102A43);
+const Color backgroundColor = Color(0xFFF1F7FB);
+const Color headingColor = Color(0xFF102A43);
+const Color secondaryText = Color(0xFF526779);
+const Color borderColor = Color(0xFFD7E7F0);
 
 // Stores the details of one student.
 class Student {
@@ -76,7 +76,7 @@ class SectionHeader extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-            // Customization 1: Teal heading creates visual hierarchy.
+            // Customization 1: Ocean blue heading creates visual hierarchy.
             color: teal,
             fontSize: 23,
             fontWeight: FontWeight.bold,
@@ -84,7 +84,7 @@ class SectionHeader extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         const Divider(
-          color: Color(0xFFD5E5E7),
+          color: Color(0xFFB9DCEB),
           thickness: 1.5,
           height: 1,
         ),
@@ -148,7 +148,7 @@ class StudentCard extends StatelessWidget {
       child: Card(
         // Customization 2: Rounded corners and subtle shadows improve appearance.
         elevation: 2,
-        shadowColor: const Color(0x180D3038),
+        shadowColor: const Color(0x18102A43),
         color: Colors.white,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
@@ -260,7 +260,7 @@ class DirectoryScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        // Customization 4: Deep teal header with a centered title and icon.
+        // Customization 4: Navy header with a centered title and icon.
         backgroundColor: darkTeal,
         foregroundColor: Colors.white,
         elevation: 0,
@@ -346,11 +346,11 @@ class DirectoryApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Campus Directory',
       theme: ThemeData(
-        // Customization 5: Material 3 creates a coordinated teal color scheme.
+        // Customization 5: Material 3 creates a coordinated ocean blue and navy color scheme.
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: teal,
-          primary: teal,
+          seedColor: const Color(0xFF167DAD),
+          primary: const Color(0xFF167DAD),
           surface: Colors.white,
         ),
         scaffoldBackgroundColor: backgroundColor,
